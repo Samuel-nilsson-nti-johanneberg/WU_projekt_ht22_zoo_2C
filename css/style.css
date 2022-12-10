@@ -3,14 +3,64 @@
     padding: 0;
 }
 
-.header{
-    height: 100vh;
-    width: 100%;
-    background-image: url('../img/resturang.jpg');
-    background-position: center;
-    background-size: cover;
-    position: relative;
+body{
+  grid-template-rows: 200px 1200px;
+  grid-template-columns: ;
+  grid-template-areas: 
+  "he he he"
+  "ma ma ma"
+  "i1 ar i2"
+  "fo fo fo";
 }
+
+header{
+  grid-area: he;
+background-color: bisque;
+    height: 100px;
+    width: 100%;
+
+}
+
+#main_page{
+  grid-area:  ma;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-image: url('../img/resturang.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 50vh;
+  width: 100%;
+}
+
+#mainpage_article{
+  grid-area: ar;
+}
+
+#bild1{
+  grid-area: i1;
+  width: 300px;
+  height: auto;
+}
+
+#bild2{
+  grid-area: i2;
+  width: 300px;
+  height: auto;
+}
+
+h1{
+  font-size: 25px;
+}
+
+.footer{
+  height: 100px;
+  background-color: darkgrey;
+}
+
+
+/* Nedan har vi all kod som är relaterad till navigationsfältet */
 
 nav{
   display: flex;
@@ -32,14 +82,14 @@ nav{
 }
 
 .nav-links li a{
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 20px;
 }
 
 .nav-links li::after{
   content: '';
-  width 0%;
+  width: 0%;
   height: 2px;
   background: red;
   display: block;
@@ -53,12 +103,7 @@ nav{
 
 
 
-/* linear-gradient(rgba(4,9,30,0.7)),(rgba(4,9,30,0.7)), */
-
-
-
-
-
+/* Koden nedan är specifikt för menysidan */
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
