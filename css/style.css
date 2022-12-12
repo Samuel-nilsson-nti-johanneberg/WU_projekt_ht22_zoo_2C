@@ -1,23 +1,29 @@
 *{
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
 }
 
-body{
-  grid-template-rows: 200px 1200px;
-  grid-template-columns: 30vh 40vh 30vh;
+#gridwrapper{
+
+  height: 100vh;
+  display: grid;
+
+  grid-template-rows: 200px 1200px 200px 200px minmax(100, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-areas: 
   "he he he"
   "ma ma ma"
-  "i1 ar i2"
+  "a1 a1 a1"
+  "a2 a2 a2"
   "fo fo fo";
 }
 
 header{
   grid-area: he;
-background-color: bisque;
-    height: 100px;
-    width: 100%;
+  background-color: bisque;
+  height: 100px;
+  width: 100%;
 
 }
 
@@ -30,34 +36,50 @@ background-color: bisque;
   background-position: center;
   background-size: cover;
   position: relative;
-  height: 50vh;
+  height: 80vh;
   width: 100%;
 }
 
-#mainpage_article{
-  grid-area: ar;
+#mainpage_article1 {
+  grid-area: a1;
+  text-align: center;
+
+  background-image: url('../img/tiger.jpg');
+  background-size: cover;
+  background-position-y: center;
+  
+  height: 80vh;
+  width: auto;
 }
 
-#bild1{
-  grid-area: i1;
+#mainpage_article2{
+  grid-area: a2;
   width: 300px;
   height: auto;
+  background-color: rgb(122, 76, 76);
+  height: 30vh;
+  width: auto;
 }
 
-#bild2{
+/* #bild2{
   grid-area: i2;
   width: 300px;
   height: auto;
-}
+  background-color: blue;
+  height: 30vh;
+  width: 30vh;
+} */
 
 h1{
   font-size: 25px;
 }
 
-.footer{
+footer{
   height: 100px;
   background-color: darkgrey;
 }
+
+
 
 
 /* Nedan har vi all kod som är relaterad till navigationsfältet */
@@ -103,12 +125,19 @@ nav{
 
 
 
+
+
 /* Koden nedan är specifikt för menysidan och dess cardlayout */
 
 #cardlayout{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.cardimg{
+  height: 100px;
+  width: 100 px;
 }
 
 .card {
@@ -131,6 +160,96 @@ nav{
     padding: 2px 16px;
 }
 
-  /* img {
+/* img {
     border-radius: 5px 5px 0 0;
-  } *
+  } */
+
+  /* koden nedan är till knappen som scrollar ner på startsidan */
+
+  *,
+:after,
+:before {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+}
+
+.scroll_section {
+  height: 100vh;
+  width: 100%;
+  display: table;
+  
+}
+/* section.ok{
+  background-color: #555;
+}
+
+p{
+  color: white;
+  font-family: arial;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+} */
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgb(0, 0, 0);
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 3px solid rgb(0, 0, 0);
+    border-width: 0px 0 2px 2px;
+}
+
+
+/* Jag fick hjälp från google med nedanstående kod */
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
