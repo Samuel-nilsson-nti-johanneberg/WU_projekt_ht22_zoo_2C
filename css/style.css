@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
 }
 
-#gridwrapper{
+#mainpage_gridwrapper{
 
   height: 100vh;
   display: grid;
@@ -252,4 +252,65 @@ p{
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
   }
+}
+
+
+
+
+
+
+.kontakt_gridwrapper {
+
+  height: 100vh;
+  display: grid;
+
+  grid-template-rows: 200px 500px 500px 500px minmax(100, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: 
+  "he he he"
+  "s1 s2 s2"
+  "s3 s3 s3"
+  "s4 s5 s6"
+  "fo fo fo";
+}
+
+
+.kontakt_bilder{
+  width: 50vh;
+  height: auto;
+  
+}
+
+.kontakt_all_section{
+  margin: 10vh;
+  padding: 5vh;
+
+}
+
+#kontakt_section1{
+  grid-area: s1;
+}
+
+#kontakt_section2{
+  grid-area: s2;
+}
+
+#kontakt_section3{
+  grid-area: s3;
+}
+
+#kontakt_section4{
+  grid-area: s4;
+  height: auto;
+  width: 300px;
+}
+
+#kontakt_section5{
+  grid-area: s6;
+}
+
+#kontakt_section6{
+  grid-area: s6;
+  height: auto;
+  width: 300px;
 }
