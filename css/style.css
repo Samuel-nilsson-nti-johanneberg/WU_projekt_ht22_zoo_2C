@@ -28,12 +28,17 @@ header{
 }
 
 .boxed {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+
   border: 2px solid white;
   background-color: rgba(255, 255, 255, 0.749);
   width: 50%;
   height: 75%;
-  align-items: center;
-  
+  padding: 10vh;
 }
 
 #main_page{
@@ -81,6 +86,10 @@ header{
 
 h1{
   font-size: 25px;
+}
+
+p {
+  font-size: 18px;
 }
 
 footer{
@@ -146,19 +155,18 @@ nav{
 
 .cardimg {
   height: 100px;
-  width: 100 px;
+  width: 100px;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
+
     height: 270px;
-    width: 200px;
-    padding: 5vh;
+    width: 400px;
+    padding: 1vh;
     margin: 6vh;
-
-
   }
   
   .card:hover {
@@ -167,7 +175,60 @@ nav{
   
   .container {
     padding: 2px 16px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
+
+#card1 {
+  background-image: url('../img/algstek.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#card2 {
+  background-image: url('../img/renkorv.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#card3 {
+  background-image: url('../img/oxfile.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#card4 {
+  background-image: url('../img/kycklinggryta.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#card5 {
+  background-image: url('../img/pizza.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#card6 {
+  background-image: url('../img/hamburgare.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#card7 {
+  background-image: url('../img/lammkott.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#card8 {
+  background-image: url('../img/quorngryta.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
 
 /* img {
     border-radius: 5px 5px 0 0;
@@ -269,6 +330,17 @@ p{
 
 /* Nedanstående kod är specifikt avsedd till kontaktsidan (alltså kontakt.html) */
 
+.boxed2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.749);
+
+}
 
 .kontakt_gridwrapper {
 
@@ -276,12 +348,12 @@ p{
   display: grid;
 
   grid-template-rows: 200px 500px 500px minmax(100, 1fr);
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.5fr 1fr;
   grid-template-areas: 
-  "he he"
-  "s1 s2"
-  "s3 s4"
-  "fo fo";
+  "he he he"
+  "s1 s2 s5"
+  "s3 s4 s5"
+  "fo fo fo";
 }
 
 
@@ -291,11 +363,11 @@ p{
   
 }
 
-.kontakt_all_section {
+/* .kontakt_all_section {
   margin: 10vh;
   padding: 5vh;
 
-}
+} */
 
 #kontakt_section1 {
   grid-area: s1;
@@ -307,20 +379,14 @@ p{
 
 #kontakt_section3 {
   grid-area: s3;
+  height: auto;
+  width: 300px;
 }
 
 #kontakt_section4 {
   grid-area: s4;
-  height: auto;
-  width: 300px;
 }
 
 #kontakt_section5 {
-  grid-area: s6;
-}
-
-#kontakt_section6 {
-  grid-area: s6;
-  height: auto;
-  width: 300px;
+  grid-area: s5;
 }
