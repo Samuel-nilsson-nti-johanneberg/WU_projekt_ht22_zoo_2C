@@ -24,7 +24,6 @@ header{
   background-color: bisque;
   height: 100px;
   width: 100%;
-
 }
 
 .boxed {
@@ -44,7 +43,7 @@ header{
 #main_page{
   grid-area:  ma;
   display: grid;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   background-image: url('../img/shawnanggg-nmpW_WwwVSc-unsplash.jpg');
   background-position: center;
@@ -145,17 +144,34 @@ nav{
 
 /* Koden nedan är specifikt för menysidan och dess cardlayout */
 
+.boxed_card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.749);
+  padding: 10vh;
+  height: 5rem;
+  width: auto;
+  /* margin: 5vh; */
+}
+
 #cardlayout {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  
 }
 
 .cardimg {
-  height: 100px;
-  width: 100px;
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card {
@@ -163,63 +179,24 @@ nav{
     transition: 0.3s;
     border-radius: 5px;
 
-    height: 270px;
+    height: auto;
     width: 400px;
+    /* width: fit-content; */
     padding: 1vh;
     margin: 6vh;
+
   }
   
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
   }
   
   .container {
     padding: 2px 16px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
-}
-
-#card1 {
-  background-image: url('../img/algstek.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-#card2 {
-  background-image: url('../img/renkorv.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-#card3 {
-  background-image: url('../img/oxfile.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-#card4 {
-  background-image: url('../img/kycklinggryta.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-#card5 {
-  background-image: url('../img/pizza.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-#card6 {
-  background-image: url('../img/hamburgare.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-#card7 {
-  background-image: url('../img/lammkott.jpg');
-  background-size: cover;
-  background-position: center;
+    align-items: center;
 }
 
 #card8 {
@@ -250,17 +227,6 @@ nav{
   display: table;
   
 }
-/* section.ok{
-  background-color: #555;
-}
-
-p{
-  color: white;
-  font-family: arial;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-} */
 
 .scroll-down {
   opacity: 1;
@@ -330,17 +296,7 @@ p{
 
 /* Nedanstående kod är specifikt avsedd till kontaktsidan (alltså kontakt.html) */
 
-.boxed2 {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
 
-  border: 2px solid rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.749);
-
-}
 
 .kontakt_gridwrapper {
 
@@ -358,7 +314,7 @@ p{
 
 
 .kontakt_bilder {
-  width: 50vh;
+  width: 60vh;
   height: auto;
   
 }
