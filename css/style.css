@@ -24,7 +24,6 @@ body {
 
 header{
   grid-area: he;
-  /* background-color: bisque; */
   background-color: #bae3cd;
   height: 100px;
   width: 100%;
@@ -311,7 +310,7 @@ nav{
   height: 100vh;
   display: grid;
 
-  grid-template-rows: 200px 500px 500px 500px minmax(100, 1fr);
+  grid-template-rows: 100px 80vh 50vh 70vh minmax(20vh, 1fr);
   grid-template-columns: 1fr 1.5fr;
   grid-template-areas: 
   "he he"
