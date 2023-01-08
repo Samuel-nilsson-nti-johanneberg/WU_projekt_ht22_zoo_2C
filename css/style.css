@@ -5,18 +5,17 @@
 }
 
 #mainpage_gridwrapper{
-
   height: 100vh;
   display: grid;
 
-  grid-template-rows: 200px 1200px 200px 200px minmax(100, 1fr);
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100px 800px 800px 800px minmax(400px, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: 
-  "he he he"
-  "ma ma ma"
-  "a1 a1 a1"
-  "a2 a2 a2"
-  "fo fo fo";
+  "he he"
+  "ma ma"
+  "a1 a1"
+  "a2 a2"
+  "fo fo";
 }
 
 body {
@@ -44,7 +43,7 @@ header{
   background-color: rgba(255, 255, 255, 0.749);
   width: 50%;
   height: 75%;
-  padding: 10vh;
+  margin: 10vh;
 }
 
 
@@ -54,7 +53,7 @@ header{
   justify-content: center;
   align-items: center;
  
-  background-image: url('../img/shawnanggg-nmpW_WwwVSc-unsplash.jpg');
+  background-image: url('../img/resturang.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -177,7 +176,6 @@ nav{
   padding: 10vh;
   height: 5rem;
   width: auto;
-  /* margin: 5vh; */
 }
 
 #cardlayout {
@@ -201,7 +199,6 @@ nav{
 
   height: auto;
   width: 400px;
-  /* width: fit-content; */
   padding: 1vh;
   margin: 6vh;
 }
@@ -226,18 +223,12 @@ nav{
 
 
 
-/* img {
-    border-radius: 5px 5px 0 0;
-  } */
+/* koden nedan är till knappen som scrollar ner på startsidan */
+/* Jag har fått lite google-hjälp med vissa rader här nere som till exmepl webkit-transition, -webkit-animation och z-index */
 
-  /* koden nedan är till knappen som scrollar ner på startsidan */
-
-  *,
 :after,
 :before {
   box-sizing: border-box;
-  /* margin: 0;
-  padding: 0; */
 }
 
 .scroll_section {
@@ -330,17 +321,10 @@ nav{
   "fo fo";
 }
 
-
 .kontakt_bilder {
   width: 60vh;
   height: auto;
 }
-
-/* .kontakt_all_section {
-  margin: 10vh;
-  padding: 5vh;
-
-} */
 
 #kontakt_section1 {
   grid-area: s1;
@@ -375,8 +359,4 @@ nav{
   justify-content: space-evenly;
   align-items: center;
   margin: 100px;
-}
-
-#kontakt_section5 {
-  grid-area: s5;
 }
